@@ -8,8 +8,15 @@ function App() {
   return (
     <Router style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
       {/* Navbar goes here, ensure it has a higher z-index */}
-      {/* <Navbar zIndex="20" /> */}
-      <Routes style={{ paddingBottom: '4rem' }}>
+      <Flex as="nav" zIndex="20" bg="gray.200" p={3} justifyContent="space-between" alignItems="center" position="fixed" top="0" width="full">
+        <Box fontSize="lg" fontWeight="bold">NoteApp</Box>
+        <Box>
+          <Link href="/" p={2}>Home</Link>
+          <Link href="/about" p={2}>About</Link>
+          <Link href="/contact" p={2}>Contact</Link>
+        </Box>
+      </Flex>
+      <Routes style={{ paddingTop: '4rem', paddingBottom: '4rem' }}>
         <Route exact path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
