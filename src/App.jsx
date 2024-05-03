@@ -6,7 +6,7 @@ function App() {
   const Navbar = () => {
     const bgColor = useColorModeValue('gray.100', 'gray.900');
     return (
-      <Box bg={bgColor} px={4}>
+      <Box bg={bgColor} px={4} position="fixed" width="full" zIndex="banner">
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <Box>
             <Link href="/" px={2}>Home</Link>
@@ -19,7 +19,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', marginTop: '64px' }}>
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Index />} />
