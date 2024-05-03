@@ -1,5 +1,5 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { Box, Text } from '@chakra-ui/react';
+import { Flex, Link, Box, Text } from '@chakra-ui/react';
 import Index from "./pages/Index.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
